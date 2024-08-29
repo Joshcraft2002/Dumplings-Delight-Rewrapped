@@ -2,6 +2,7 @@ package cn.foggyhillside.dumplings_delight.registry;
 
 import cn.foggyhillside.dumplings_delight.DumplingsDelight;
 import cn.foggyhillside.dumplings_delight.item.FoodList;
+import cn.foggyhillside.dumplings_delight.item.GarlicItem;
 import com.google.common.collect.Sets;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -23,20 +24,22 @@ public class ItemRegistry {
     }
 
     //Crate
-    public static final Supplier<Item> ChineseCabbageCrate = registerWithTab("chinese_cabbage_crate",
+    public static final Supplier<Item> CHINESE_CABBAGE_CRATE = registerWithTab("chinese_cabbage_crate",
             () -> new BlockItem(BlockRegistry.CHINESE_CABBAGE_CRATE.get(), new Item.Properties()));
-    public static final Supplier<Item> GarlicCrate = registerWithTab("garlic_crate",
+    public static final Supplier<Item> GARLIC_CRATE = registerWithTab("garlic_crate",
             () -> new BlockItem(BlockRegistry.GARLIC_CRATE.get(), new Item.Properties()));
-    public static final Supplier<Item> GreenOnionCrate = registerWithTab("greenonion_crate",
-            () -> new BlockItem(BlockRegistry.GREEN_ONION.get(), new Item.Properties()));
-    public static final Supplier<Item> EggplantCrate = registerWithTab("eggplant_crate",
+    public static final Supplier<Item> GREENONION_CRATE = registerWithTab("greenonion_crate",
+            () -> new BlockItem(BlockRegistry.GREENONION_CRATE.get(), new Item.Properties()));
+    public static final Supplier<Item> EGGPLANT_CRATE = registerWithTab("eggplant_crate",
             () -> new BlockItem(BlockRegistry.EGGPLANT_CRATE.get(), new Item.Properties()));
-    public static final Supplier<Item> GarlicChiveCrate = registerWithTab("garlic_chive_crate",
+    public static final Supplier<Item> GARLIC_CHIVE_CRATE = registerWithTab("garlic_chive_crate",
             () -> new BlockItem(BlockRegistry.GARLIC_CHIVE_CRATE.get(), new Item.Properties()));
-    public static final Supplier<Item> FennelCrate = registerWithTab("fennel_crate",
+    public static final Supplier<Item> FENNEL_CRATE = registerWithTab("fennel_crate",
             () -> new BlockItem(BlockRegistry.FENNEL_CRATE.get(), new Item.Properties()));
 
     //Feast
+    public static final Supplier<Item> DUMPLING_MEDLEY = registerWithTab("dumpling_medley",
+            () -> new BlockItem(BlockRegistry.DUMPLING_MEDLEY.get(), new Item.Properties().stacksTo(1)));
     public static final Supplier<Item> VINEGAR = registerWithTab("vinegar",
             () -> new ConsumableItem(new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).stacksTo(1), true));
     public static final Supplier<Item> CALAMARI = registerWithTab("calamari",
@@ -49,10 +52,12 @@ public class ItemRegistry {
             () -> new BlockItem(BlockRegistry.CHINESE_CABBAGES.get(), new Item.Properties()));
     public static final Supplier<Item> CHINESE_CABBAGE_LEAF = registerWithTab("chinese_cabbage_leaf",
             () -> new Item(new Item.Properties().food(FoodList.CHINESE_CABBAGE_LEAF)));
+    public static final Supplier<Item> GARLIC = registerWithTab("garlic",
+            () -> new GarlicItem(BlockRegistry.GARLIC.get(), new Item.Properties().food(FoodList.GARLIC), true));
     public static final Supplier<Item> GARLIC_CLOVE = registerWithTab("garlic_clove",
             () -> new ConsumableItem(new Item.Properties().food(FoodList.GARLIC_CLOVE), true));
-    public static final Supplier<Item> GREEN_ONION = registerWithTab("greenonion",
-            () -> new BlockItem(BlockRegistry.GREEN_ONION.get(), new Item.Properties().food(FoodList.GREEN_ONION)));
+    public static final Supplier<Item> GREENONION = registerWithTab("greenonion",
+            () -> new BlockItem(BlockRegistry.GREENONION.get(), new Item.Properties().food(FoodList.GREENONION)));
     public static final Supplier<Item> EGGPLANT = registerWithTab("eggplant",
             () -> new Item(new Item.Properties().food(FoodList.EGGPLANT)));
     public static final Supplier<Item> EGGPLANT_SEEDS = registerWithTab("eggplant_seeds",

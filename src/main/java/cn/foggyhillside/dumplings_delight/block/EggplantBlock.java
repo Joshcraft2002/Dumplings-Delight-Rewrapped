@@ -57,31 +57,4 @@ public class EggplantBlock extends CropBlock
 
     @Override
     protected ItemLike getBaseSeedId() { return ItemRegistry.EGGPLANT_SEEDS.get(); }
-
-    /*@Override
-    public void performBonemeal(ServerLevel level, RandomSource random, BlockPos pos, BlockState state) {
-        int newAge = this.getAge(state) + this.getBonemealAgeIncrease(level);
-        int maxAge = this.getMaxAge();
-        if (newAge > maxAge) {
-            newAge = maxAge;
-        }
-
-        level.setBlockAndUpdate(pos, state.setValue(getAgeProperty(), newAge));
-    }*/
-
-    /*@Override
-    public BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor level, BlockPos currentPos, BlockPos facingPos) {
-        if (!state.canSurvive(level, currentPos)) {
-            level.scheduleTick(currentPos, this, 1);
-        }
-
-        return state;
-    }*/
-
-    /*@Override
-    public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-        if (!state.canSurvive(level, pos)) {
-            level.destroyBlock(pos, true);
-        }
-    }*/
 }

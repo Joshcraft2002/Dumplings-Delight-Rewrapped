@@ -17,7 +17,7 @@ public class BlockRegistry {
             () -> new ChineseCabbageBlock(Block.Properties.ofFullCopy(Blocks.WHEAT)));
     public static final Supplier<Block> GARLIC = BLOCKS.register("garlic",
             () -> new GarlicBlock(Block.Properties.ofFullCopy(Blocks.WHEAT)));
-    public static final Supplier<Block> GREEN_ONION = BLOCKS.register("greenonion",
+    public static final Supplier<Block> GREENONION = BLOCKS.register("greenonion",
             () -> new GreenOnionBlock(Block.Properties.ofFullCopy(Blocks.WHEAT)));
     public static final Supplier<Block> EGGPLANT = BLOCKS.register("eggplant",
             () -> new EggplantBlock(Block.Properties.ofFullCopy(Blocks.WHEAT)));
@@ -29,7 +29,7 @@ public class BlockRegistry {
             () -> new Block(Block.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
     public static final Supplier<Block> GARLIC_CRATE = BLOCKS.register("garlic_crate",
             () -> new Block(Block.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
-    public static final Supplier<Block> GREEN_ONION_CRATE = BLOCKS.register("greenonion_crate",
+    public static final Supplier<Block> GREENONION_CRATE = BLOCKS.register("greenonion_crate",
             () -> new Block(Block.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
     public static final Supplier<Block> EGGPLANT_CRATE = BLOCKS.register("eggplant_crate",
             () -> new Block(Block.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
@@ -37,4 +37,6 @@ public class BlockRegistry {
             () -> new Block(Block.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
     public static final Supplier<Block> FENNEL_CRATE = BLOCKS.register("fennel_crate",
             () -> new Block(Block.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final Supplier<Block> DUMPLING_MEDLEY = BLOCKS.register("dumpling_medley",
+            () -> new DumplingMedleyBlock(Block.Properties.ofFullCopy(Blocks.WHITE_WOOL), true));
 }

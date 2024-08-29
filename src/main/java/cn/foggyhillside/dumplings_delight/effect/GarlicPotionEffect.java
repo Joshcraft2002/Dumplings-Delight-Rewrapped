@@ -31,10 +31,7 @@ public class GarlicPotionEffect extends MobEffect {
                 Entity entity = event.getEntity();
                 ItemStack itemStack = event.getItem();
 
-                if (!itemStack.is(DUMPLING) || entity == null)
-                {
-                    return;
-                }
+                if (!itemStack.is(DUMPLING) || entity == null) return;
 
                 if (entity instanceof Player) {
                     Collection<MobEffectInstance> effects = ((Player) entity).getActiveEffects();

@@ -29,7 +29,7 @@ public class GreenOnionBlock extends CropBlock
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return ItemRegistry.GREEN_ONION.get();
+        return ItemRegistry.GREENONION.get();
     }
 
     @Override

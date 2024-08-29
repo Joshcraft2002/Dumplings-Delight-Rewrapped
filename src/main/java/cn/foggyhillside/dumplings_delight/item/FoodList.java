@@ -34,7 +34,7 @@ public class FoodList {
     public static final FoodProperties CHINESE_CABBAGE = new FoodProperties.Builder().nutrition(3).saturationModifier(0.2F).build();
     public static final FoodProperties CHINESE_CABBAGE_LEAF = new FoodProperties.Builder().nutrition(1).saturationModifier(0.4F).build();
     public static final FoodProperties GARLIC = new FoodProperties.Builder().nutrition(1).saturationModifier(0.2F).effect(() -> new MobEffectInstance(EffectRegistry.GARLIC, 75*20, 0), 1).alwaysEdible().build();
-    public static final FoodProperties GREEN_ONION = new FoodProperties.Builder().nutrition(1).saturationModifier(0.2F).build();
+    public static final FoodProperties GREENONION = new FoodProperties.Builder().nutrition(1).saturationModifier(0.2F).build();
     public static final FoodProperties EGGPLANT = new FoodProperties.Builder().nutrition(2).saturationModifier(0.2F).build();
     public static final FoodProperties GARLIC_CHIVE = new FoodProperties.Builder().nutrition(1).saturationModifier(0.2F).build();
     public static final FoodProperties FENNEL = new FoodProperties.Builder().nutrition(1).saturationModifier(0.2F).build();
