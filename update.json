@@ -1,0 +1,12 @@
+{
+  "homepage": "https://modrinth.com/mod/dumplings-delight-rewrapped",
+  "1.21.1": {
+    "1.0.0": "first full port to 1.21"
+  },
+  "promos": {
+    "1.21.1-latest": "1.0.0",
+    "1.21.1-recommended": "1.0.0",
+    "1.21-latest": "1.0.0",
+    "1.21-recommended": "1.0.0"
+  }
+}

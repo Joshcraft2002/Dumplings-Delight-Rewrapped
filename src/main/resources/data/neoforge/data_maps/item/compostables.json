@@ -1,0 +1,97 @@
+{
+  "values": {
+    "dumplings_delight:beef_tomato_boiled_dumpling": {
+      "chance": 1.0
+    },
+    "dumplings_delight:calamari_boiled_dumpling": {
+      "chance": 1.0
+    },
+    "dumplings_delight:chicken_mushroom_boiled_dumpling": {
+      "chance": 1.0
+    },
+    "dumplings_delight:chinese_cabbage": {
+      "chance": 0.65
+    },
+    "dumplings_delight:chinese_cabbage_leaf": {
+      "chance": 0.5
+    },
+    "dumplings_delight:chinese_cabbage_seeds": {
+      "chance": 0.3
+    },
+    "dumplings_delight:cod_boiled_dumpling": {
+      "chance": 1.0
+    },
+    "dumplings_delight:dandelion_leaf_boiled_dumpling": {
+      "chance": 1.0
+    },
+    "dumplings_delight:eggplant": {
+      "chance": 0.65
+    },
+    "dumplings_delight:eggplant_egg_boiled_dumpling": {
+      "chance": 1.0
+    },
+    "dumplings_delight:eggplant_seeds": {
+      "chance": 0.3
+    },
+    "dumplings_delight:fennel": {
+      "chance": 0.65
+    },
+    "dumplings_delight:fennel_seeds": {
+      "chance": 0.3
+    },
+    "dumplings_delight:fungus_boiled_dumpling": {
+      "chance": 1.0
+    },
+    "dumplings_delight:garlic": {
+      "chance": 0.65
+    },
+    "dumplings_delight:garlic_chive": {
+      "chance": 0.65
+    },
+    "dumplings_delight:garlic_chive_egg_boiled_dumpling": {
+      "chance": 1.0
+    },
+    "dumplings_delight:garlic_chive_seeds": {
+      "chance": 0.3
+    },
+    "dumplings_delight:garlic_clove": {
+      "chance": 0.15
+    },
+    "dumplings_delight:greenonion": {
+      "chance": 0.65
+    },
+    "dumplings_delight:mushroom_boiled_dumpling": {
+      "chance": 1.0
+    },
+    "dumplings_delight:mutton_boiled_dumpling": {
+      "chance": 1.0
+    },
+    "dumplings_delight:pork_cabbage_boiled_dumpling": {
+      "chance": 1.0
+    },
+    "dumplings_delight:pork_celery_boiled_dumpling": {
+      "chance": 1.0
+    },
+    "dumplings_delight:pork_kelp_boiled_dumpling": {
+      "chance": 1.0
+    },
+    "dumplings_delight:pork_potato_boiled_dumpling": {
+      "chance": 1.0
+    },
+    "dumplings_delight:pork_fennel_boiled_dumpling": {
+      "chance": 1.0
+    },
+    "dumplings_delight:pufferfish_boiled_dumpling": {
+      "chance": 1.0
+    },
+    "dumplings_delight:rabbit_meat_boiled_dumpling": {
+      "chance": 1.0
+    },
+    "dumplings_delight:salmon_boiled_dumpling": {
+      "chance": 1.0
+    },
+    "dumplings_delight:tomato_egg_boiled_dumpling": {
+      "chance": 1.0
+    }
+  }
+}

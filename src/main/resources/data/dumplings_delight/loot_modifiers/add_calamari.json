@@ -1,0 +1,10 @@
+{
+  "type": "dumplings_delight:add_calamari",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "minecraft:entities/squid"
+    }
+  ],
+  "item": "dumplings_delight:calamari"
+}
