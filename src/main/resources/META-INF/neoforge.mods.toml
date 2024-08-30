@@ -7,8 +7,7 @@ issueTrackerURL="https://github.com/Joshcraft2002/Dumplings-Delight-Rewrapped/is
 modId="${mod_id}"
 version="${mod_version}"
 displayName="${mod_name}"
-# A URL to query for updates for this mod. See the JSON update specification https://docs.neoforged.net/docs/misc/updatechecker/
-#updateJSONURL="https://change.me.example.invalid/updates.json" #optional
+updateJSONURL="https://raw.githubusercontent.com/Joshcraft2002/Dumplings-Delight-Rewrapped/main/update.json"
 logoFile="logo.png"
 credits="FoggyHillSide as original mod author"
 authors="${mod_authors}"
