@@ -19,7 +19,7 @@ repositories {
 }
 
 base {
-    archivesName = mod_id
+    archivesName = 'DumplingsDelightRewrapped'
 }
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
