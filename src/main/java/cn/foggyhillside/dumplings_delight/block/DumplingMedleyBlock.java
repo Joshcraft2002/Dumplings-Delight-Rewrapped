@@ -1,6 +1,6 @@
 package cn.foggyhillside.dumplings_delight.block;
 
-import cn.foggyhillside.dumplings_delight.registry.EffectRegistry;
+import cn.foggyhillside.dumplings_delight.registry.DumplingsDelightEffects;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
@@ -27,7 +27,6 @@ import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import org.slf4j.Logger;
 
 import java.util.Collection;
 
@@ -132,7 +131,7 @@ public class DumplingMedleyBlock extends Block {
     public boolean garlic(Player player) {
         Collection<MobEffectInstance> effects = player.getActiveEffects();
         for (MobEffectInstance effect : effects) {
-            if (effect.getEffect() == EffectRegistry.GARLIC) { return true; }
+            if (effect.getEffect() == DumplingsDelightEffects.GARLIC) { return true; }
         }
         return false;
     }

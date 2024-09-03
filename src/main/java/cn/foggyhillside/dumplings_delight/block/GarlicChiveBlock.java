@@ -1,6 +1,6 @@
 package cn.foggyhillside.dumplings_delight.block;
 
-import cn.foggyhillside.dumplings_delight.registry.ItemRegistry;
+import cn.foggyhillside.dumplings_delight.registry.DumplingsDelightItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.ItemLike;
@@ -29,7 +29,7 @@ public class GarlicChiveBlock extends CropBlock
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return ItemRegistry.GARLIC_CHIVE_SEEDS.get();
+        return DumplingsDelightItems.GARLIC_CHIVE_SEEDS.get();
     }
 
     @Override

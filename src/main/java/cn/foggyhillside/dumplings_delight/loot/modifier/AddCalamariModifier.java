@@ -15,15 +15,15 @@ import net.neoforged.neoforge.common.loot.LootModifier;
 import javax.annotation.Nonnull;
 import java.util.function.Supplier;
 
-public class CalamariAdditionModifier extends LootModifier {
-    public static final Supplier<MapCodec<CalamariAdditionModifier>> CODEC = Suppliers.memoize(() ->
+public class AddCalamariModifier extends LootModifier {
+    public static final Supplier<MapCodec<AddCalamariModifier>> CODEC = Suppliers.memoize(() ->
             RecordCodecBuilder.mapCodec(inst -> codecStart(inst)
                     .and(BuiltInRegistries.ITEM.byNameCodec().fieldOf("item").forGetter((m) -> m.item))
-                    .apply(inst, CalamariAdditionModifier::new)));
+                    .apply(inst, AddCalamariModifier::new)));
 
     private final Item item;
 
-    protected CalamariAdditionModifier(LootItemCondition[] conditionsIn, Item item) {
+    protected AddCalamariModifier(LootItemCondition[] conditionsIn, Item item) {
         super(conditionsIn);
         this.item = item;
     }

@@ -1,6 +1,6 @@
 package cn.foggyhillside.dumplings_delight.effect;
 
-import cn.foggyhillside.dumplings_delight.registry.EffectRegistry;
+import cn.foggyhillside.dumplings_delight.registry.DumplingsDelightEffects;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -14,7 +14,7 @@ import cn.foggyhillside.dumplings_delight.DumplingsDelight;
 
 import java.util.Collection;
 
-import static cn.foggyhillside.dumplings_delight.tag.ModTags.DUMPLING;
+import static cn.foggyhillside.dumplings_delight.tag.DumplingsDelightTags.DUMPLING;
 
 public class GarlicPotionEffect extends MobEffect {
     public GarlicPotionEffect() {
@@ -36,7 +36,7 @@ public class GarlicPotionEffect extends MobEffect {
                 if (entity instanceof Player) {
                     Collection<MobEffectInstance> effects = ((Player) entity).getActiveEffects();
                     for (MobEffectInstance effect : effects) {
-                        if (effect.getEffect() == EffectRegistry.GARLIC)
+                        if (effect.getEffect() == DumplingsDelightEffects.GARLIC)
                         {
                             ((Player) entity).getFoodData().setFoodLevel((int) (((Player) entity).getFoodData().getFoodLevel() + 1));
                         }

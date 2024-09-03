@@ -10,7 +10,7 @@ import cn.foggyhillside.dumplings_delight.block.*;
 
 import java.util.function.Supplier;
 
-public class BlockRegistry {
+public class DumplingsDelightBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(Registries.BLOCK, DumplingsDelight.MOD_ID);
 
     public static final Supplier<Block> CHINESE_CABBAGES = BLOCKS.register("chinese_cabbages",

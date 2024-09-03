@@ -13,7 +13,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import cn.foggyhillside.dumplings_delight.registry.ItemRegistry;
+import cn.foggyhillside.dumplings_delight.registry.DumplingsDelightItems;
 import vectorwing.farmersdelight.common.registry.ModSounds;
 
 public class EggplantBlock extends CropBlock
@@ -40,7 +40,7 @@ public class EggplantBlock extends CropBlock
         boolean isMature = age == getMaxAge();
         if (isMature) {
             int quantity = 1 + level.random.nextInt(2);
-            popResource(level, pos, new ItemStack(ItemRegistry.EGGPLANT.get(), quantity));
+            popResource(level, pos, new ItemStack(DumplingsDelightItems.EGGPLANT.get(), quantity));
 
             level.playSound(null, pos, ModSounds.ITEM_TOMATO_PICK_FROM_BUSH.get(), SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
             level.setBlock(pos, state.setValue(getAgeProperty(), 5), 2);
@@ -56,5 +56,5 @@ public class EggplantBlock extends CropBlock
     }
 
     @Override
-    protected ItemLike getBaseSeedId() { return ItemRegistry.EGGPLANT_SEEDS.get(); }
+    protected ItemLike getBaseSeedId() { return DumplingsDelightItems.EGGPLANT_SEEDS.get(); }
 }
