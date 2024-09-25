@@ -1,0 +1,29 @@
+{
+	"schemaVersion": 1,
+	"id": "dumplings_delight",
+	"version": "1.1.1",
+	"name": "Dumpling's Delight Rewrapped",
+	"description": "A port of the original Dumpling's Delight mod",
+	"authors": [
+		"Joshcraft2002"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "logo.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"cn.foggyhillside.dumplings_delight.DumplingsDelight"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.16.2",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*",
+		"farmersdelight": "*"
+	}
+}

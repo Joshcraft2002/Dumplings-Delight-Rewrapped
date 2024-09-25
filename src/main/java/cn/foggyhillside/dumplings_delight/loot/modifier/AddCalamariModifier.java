@@ -9,10 +9,10 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
-import net.neoforged.neoforge.common.loot.IGlobalLootModifier;
-import net.neoforged.neoforge.common.loot.LootModifier;
+import io.github.fabricators_of_create.porting_lib.loot.IGlobalLootModifier;
+import io.github.fabricators_of_create.porting_lib.loot.LootModifier;
 
-import javax.annotation.Nonnull;
+import org.jetbrains.annotations.NotNull;
 import java.util.function.Supplier;
 
 public class AddCalamariModifier extends LootModifier {
@@ -28,7 +28,7 @@ public class AddCalamariModifier extends LootModifier {
         this.item = item;
     }
 
-    @Nonnull
+    @NotNull
     @Override
     protected ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
         generatedLoot.add(new ItemStack(item, 1));

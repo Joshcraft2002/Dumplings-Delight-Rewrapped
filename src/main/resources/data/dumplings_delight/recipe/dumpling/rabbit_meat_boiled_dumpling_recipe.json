@@ -5,8 +5,8 @@
       "tag": "c:foods/dough"
     },
     {
-      "type": "neoforge:compound",
-      "children": [
+      "fabric:type": "fabric:any",
+      "ingredients": [
         {
           "item": "minecraft:rabbit"
         },

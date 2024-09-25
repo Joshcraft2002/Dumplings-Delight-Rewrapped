@@ -5,13 +5,15 @@
       "tag": "c:crops/rice"
     },
     {
-      "type": "neoforge:components",
+      "fabric:type": "fabric:components",
       "components": {
         "minecraft:potion_contents": {
           "potion": "minecraft:water"
         }
       },
-      "items": "minecraft:potion"
+      "base": {
+        "item": "minecraft:potion"
+      }
     }
   ],
   "result": {

@@ -41,13 +41,13 @@ public class GarlicItem extends BlockItem {
         this.hasCustomTooltip = hasCustomTooltip;
     }
 
-    @Override
+    /*@Override
     public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity consumer) {
         if (!level.isClientSide) {
             this.affectConsumer(stack, level, consumer);
         }
 
-        ItemStack containerStack = stack.getCraftingRemainingItem();
+        ItemStack containerStack = stack.getRecipeRemainder();
 
         if (stack.getFoodProperties(consumer) != null) {
             super.finishUsingItem(stack, level, consumer);
@@ -77,7 +77,7 @@ public class GarlicItem extends BlockItem {
     }
 
     public void affectConsumer(ItemStack stack, Level level, LivingEntity consumer) {
-    }
+    }*/
 
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag isAdvanced) {

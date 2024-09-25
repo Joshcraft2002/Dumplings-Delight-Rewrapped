@@ -7,9 +7,6 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.entity.living.LivingEntityUseItemEvent;
 import cn.foggyhillside.dumplings_delight.DumplingsDelight;
 
 import java.util.Collection;
@@ -21,7 +18,7 @@ public class GarlicPotionEffect extends MobEffect {
         super(MobEffectCategory.BENEFICIAL, 14545909);
     }
 
-    public static class OnFinishEat {
+    /*public static class OnFinishEat {
         @EventBusSubscriber(modid = DumplingsDelight.MOD_ID)
         private static class GlobalTrigger {
             @SubscribeEvent
@@ -46,5 +43,5 @@ public class GarlicPotionEffect extends MobEffect {
                 }
             }
         }
-    }
+    }*/
 }

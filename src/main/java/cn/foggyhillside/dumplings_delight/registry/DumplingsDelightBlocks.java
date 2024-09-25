@@ -4,9 +4,9 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
-import net.neoforged.neoforge.registries.DeferredRegister;
 import cn.foggyhillside.dumplings_delight.DumplingsDelight;
 import cn.foggyhillside.dumplings_delight.block.*;
+import io.github.fabricators_of_create.porting_lib.util.DeferredRegister;
 
 import java.util.function.Supplier;
 
