@@ -12,9 +12,6 @@ logoFile="logo.png"
 credits="FoggyHillSide as original mod author"
 authors="${mod_authors}"
 description='''${mod_description}'''
-## Catalogue mod compatibility
-itemIcon = "dumplings_delight:pork_celery_boiled_dumpling"
-configBackground = "minecraft:textures/block/stripped_oak_log.png"
 
 [[dependencies.${mod_id}]]
     modId="neoforge"
@@ -23,7 +20,6 @@ configBackground = "minecraft:textures/block/stripped_oak_log.png"
     ordering="NONE"
     side="BOTH"
 
-# Here's another dependency
 [[dependencies.${mod_id}]]
     modId="minecraft"
     type="required"
@@ -31,7 +27,7 @@ configBackground = "minecraft:textures/block/stripped_oak_log.png"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.farmersdelight]]
+[[dependencies.${mod_id}]]
     modId="farmersdelight"
     type="required"
     versionRange="[1.2.4,)"

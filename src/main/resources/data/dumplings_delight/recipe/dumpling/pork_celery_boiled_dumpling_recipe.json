@@ -11,12 +11,12 @@
       "tag": "c:crops/celery"
     },
     {
-      "tag": "c:crops/green_onion"
+      "tag": "c:crops/greenonion"
     }
   ],
   "recipe_book_tab": "misc",
   "result": {
-    "d": "dumplings_delight:pork_celery_boiled_dumpling",
+    "id": "dumplings_delight:pork_celery_boiled_dumpling",
     "count": 2
   },
   "experience": 1.0
