@@ -8,7 +8,7 @@ A port of [Dumpling's Delight](https://modrinth.com/mod/dumplings-delight) by [F
 - rabbit meat dumpling now takes either rabbit meat or foot instead of both
 - crops and dumplings now compostable
 - villagers and wandering traders can trade crops and seeds (configurable)
-- using neoforge tags (or at least in the way [Farmer's Delight](https://modrinth.com/mod/farmers-delight) does)
+- using 'c' namespace tags
 - [Serene Seasons](https://modrinth.com/mod/serene-seasons) support
 - config for crops appearing as chest loot
 - some advancement adjustments

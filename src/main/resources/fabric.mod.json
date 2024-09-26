@@ -7,9 +7,13 @@
 	"authors": [
 		"Joshcraft2002"
 	],
+	"contributors": [
+		"FoggyHillSide as original mod author"
+	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/mod/dumplings-delight-rewrapped",
+		"issues": "https://github.com/Joshcraft2002/Dumplings-Delight-Rewrapped/issues",
+		"sources": "https://github.com/Joshcraft2002/Dumplings-Delight-Rewrapped/tree/fabric"
 	},
 	"license": "MIT",
 	"icon": "logo.png",
