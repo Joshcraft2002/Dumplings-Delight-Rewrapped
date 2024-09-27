@@ -3,7 +3,7 @@ plugins {
 	id 'maven-publish'
 }
 
-version = project.mod_version
+version = "${project.minecraft_version}-${project.mod_version}"
 group = project.maven_group
 
 base {
@@ -11,6 +11,10 @@ base {
 }
 
 repositories {
+	maven {
+		url = "https://www.cursemaven.com"
+		allowInsecureProtocol = true
+	}
 	maven { url "https://maven.parchmentmc.org" } // Parchment mappings
 	maven { url 'https://repo.greenhouse.house/releases/' } //FD Refabricated
 	maven { url 'https://repo.greenhouse.house/snapshots/' } //Porting Lib 1.21
@@ -46,6 +50,12 @@ dependencies {
 	modImplementation ("vectorwing:FarmersDelight:${project.fdrf_version}") {
 		exclude(group: "net.fabricmc")
 	}
+
+	//for testing
+	//modLocalRuntime("curse.maven:appleskin-248787:5586598")
+	//modLocalRuntime("curse.maven:croptopia-415438:5571673")
+	//modLocalRuntime("curse.maven:epherolib-885449:5439828")
+	//modLocalRuntime("curse.maven:jei-238222:5623192")
 }
 
 processResources {

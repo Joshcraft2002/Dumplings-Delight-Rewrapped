@@ -18,14 +18,16 @@ import java.util.Map;
 //TODO: delete when porting lib updates since they will for sure have added this.
 //This is hacky and tbh not even needed but hey
 //Also taken from Farmers Delight Refabricated source
+// - namespace is under dumplings_delight (for now) instead of neoforge, as otherwise it only reads FDFR compostables
 public class CompostableHelper extends SimpleJsonResourceReloadListener implements IdentifiableResourceReloadListener {
+
     public CompostableHelper() {
         super(new Gson(), "data_maps/item");
     }
 
     @Override
     protected void apply(Map<ResourceLocation, JsonElement> object, ResourceManager resourceManager, ProfilerFiller profiler) {
-        JsonElement je = object.get(ResourceLocation.fromNamespaceAndPath("neoforge", "compostables"));
+        JsonElement je = object.get(ResourceLocation.fromNamespaceAndPath("dumplings_delight", "compostables"));
         if (je != null) {
             var j = je.getAsJsonObject().get("values");
             for (var v : j.getAsJsonObject().asMap().entrySet()) {

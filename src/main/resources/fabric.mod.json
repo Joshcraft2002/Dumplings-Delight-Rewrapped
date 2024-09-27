@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "dumplings_delight",
-	"version": "1.1.1",
+	"version": "1.1.1-fabric",
 	"name": "Dumpling's Delight Rewrapped",
 	"description": "A port of the original Dumpling's Delight mod",
 	"authors": [
@@ -13,7 +13,7 @@
 	"contact": {
 		"homepage": "https://modrinth.com/mod/dumplings-delight-rewrapped",
 		"issues": "https://github.com/Joshcraft2002/Dumplings-Delight-Rewrapped/issues",
-		"sources": "https://github.com/Joshcraft2002/Dumplings-Delight-Rewrapped/tree/fabric"
+		"sources": "https://github.com/Joshcraft2002/Dumplings-Delight-Rewrapped"
 	},
 	"license": "MIT",
 	"icon": "logo.png",
