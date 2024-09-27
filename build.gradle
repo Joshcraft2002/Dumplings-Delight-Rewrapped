@@ -84,6 +84,10 @@ dependencies {
     implementation "net.neoforged:neoforge:${neo_version}"
 
     implementation "curse.maven:farmersdelight-398521:5566383"
+
+    //test
+    //implementation "curse.maven:croptopia-415438:5571647" //croptopia
+    //implementation "curse.maven:epherolib-885449:5549595" //croptopia dep (epherolib)
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
