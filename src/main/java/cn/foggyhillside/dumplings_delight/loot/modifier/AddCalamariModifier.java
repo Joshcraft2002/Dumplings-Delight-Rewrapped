@@ -1,7 +1,7 @@
 package cn.foggyhillside.dumplings_delight.loot.modifier;
 
 import com.google.common.base.Suppliers;
-import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -16,8 +16,8 @@ import org.jetbrains.annotations.NotNull;
 import java.util.function.Supplier;
 
 public class AddCalamariModifier extends LootModifier {
-    public static final Supplier<MapCodec<AddCalamariModifier>> CODEC = Suppliers.memoize(() ->
-            RecordCodecBuilder.mapCodec(inst -> codecStart(inst)
+    public static final Supplier<Codec<AddCalamariModifier>> CODEC = Suppliers.memoize(() ->
+            RecordCodecBuilder.create(inst -> codecStart(inst)
                     .and(BuiltInRegistries.ITEM.byNameCodec().fieldOf("item").forGetter((m) -> m.item))
                     .apply(inst, AddCalamariModifier::new)));
 
@@ -39,7 +39,7 @@ public class AddCalamariModifier extends LootModifier {
     }
 
     @Override
-    public MapCodec<? extends IGlobalLootModifier> codec() {
+    public Codec<? extends IGlobalLootModifier> codec() {
         return CODEC.get();
     }
 }

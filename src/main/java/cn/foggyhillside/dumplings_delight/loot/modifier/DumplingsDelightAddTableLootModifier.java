@@ -2,6 +2,7 @@ package cn.foggyhillside.dumplings_delight.loot.modifier;
 
 import cn.foggyhillside.dumplings_delight.DumplingsDelightConfig;
 import com.google.common.base.Suppliers;
+import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import io.github.fabricators_of_create.porting_lib.loot.IGlobalLootModifier;
@@ -9,6 +10,7 @@ import io.github.fabricators_of_create.porting_lib.loot.LootModifier;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.LootTable;
@@ -27,14 +29,14 @@ import static net.minecraft.world.level.storage.loot.LootTable.createStackSplitt
  */
 public class DumplingsDelightAddTableLootModifier extends LootModifier
 {
-	public static final Supplier<MapCodec<DumplingsDelightAddTableLootModifier>> CODEC = Suppliers.memoize(() ->
-			RecordCodecBuilder.mapCodec(inst -> codecStart(inst)
-					.and(ResourceKey.codec(Registries.LOOT_TABLE).fieldOf("lootTable").forGetter((m) -> m.lootTable))
+	public static final Supplier<Codec<DumplingsDelightAddTableLootModifier>> CODEC = Suppliers.memoize(() ->
+			RecordCodecBuilder.create(inst -> LootModifier.codecStart(inst)
+					.and(ResourceLocation.CODEC.fieldOf("lootTable").forGetter((m) -> m.lootTable))
 					.apply(inst, DumplingsDelightAddTableLootModifier::new)));
 
-	private final ResourceKey<LootTable> lootTable;
+	private final ResourceLocation lootTable;
 
-	protected DumplingsDelightAddTableLootModifier(LootItemCondition[] conditionsIn, ResourceKey<LootTable> lootTable) {
+	protected DumplingsDelightAddTableLootModifier(LootItemCondition[] conditionsIn, ResourceLocation lootTable) {
 		super(conditionsIn);
 		this.lootTable = lootTable;
 	}
@@ -43,18 +45,16 @@ public class DumplingsDelightAddTableLootModifier extends LootModifier
 	@Override
 	protected ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
 		if (DumplingsDelightConfig.GENERATE_DUMPLINGS_DELIGHT_CHEST_LOOT.get()) {
-			// Refabricated: The game will loop if we don't make a new context.
-			LootContext extraContext = new LootContext.Builder(((LootContextAccessor)context).getParams()).create(Optional.empty());
-			extraContext.setQueriedLootTableId(this.lootTable.location());
-			context.getResolver().get(Registries.LOOT_TABLE, this.lootTable).ifPresent((extraTable) -> {
-				extraTable.value().getRandomItemsRaw(extraContext, createStackSplitter(context.getLevel(), generatedLoot::add));
-			});
+			LootTable extraTable = context.getResolver().getLootTable(this.lootTable);
+			// Use new context to avoid a StackOverflowError.
+			LootContext newContext = new LootContext.Builder(((LootContextAccessor)context).getParams()).create(this.lootTable);
+			extraTable.getRandomItemsRaw(newContext, LootTable.createStackSplitter(context.getLevel(), generatedLoot::add));
 		}
 		return generatedLoot;
 	}
 
 	@Override
-	public MapCodec<? extends IGlobalLootModifier> codec() {
+	public Codec<? extends IGlobalLootModifier> codec() {
 		return CODEC.get();
 	}
 }

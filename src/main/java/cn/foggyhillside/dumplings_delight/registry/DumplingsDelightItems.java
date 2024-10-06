@@ -4,7 +4,7 @@ import cn.foggyhillside.dumplings_delight.DumplingsDelight;
 import cn.foggyhillside.dumplings_delight.item.DumplingsDelightFoodValues;
 import cn.foggyhillside.dumplings_delight.item.GarlicItem;
 import com.google.common.collect.Sets;
-import io.github.fabricators_of_create.porting_lib.util.DeferredRegister;
+import io.github.fabricators_of_create.porting_lib.util.LazyRegistrar;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -16,7 +16,7 @@ import java.util.function.Supplier;
 
 public class DumplingsDelightItems {
 
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(Registries.ITEM, DumplingsDelight.MOD_ID);
+    public static final LazyRegistrar<Item> ITEMS = LazyRegistrar.create(Registries.ITEM, DumplingsDelight.MOD_ID);
     public static LinkedHashSet<Supplier<Item>> CREATIVE_TAB_ITEMS = Sets.newLinkedHashSet();
 
     public static Supplier<Item> registerWithTab(final String name, final Supplier<Item> supplier) {

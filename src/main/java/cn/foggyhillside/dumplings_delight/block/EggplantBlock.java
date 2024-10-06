@@ -3,9 +3,11 @@ package cn.foggyhillside.dumplings_delight.block;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
@@ -35,18 +37,20 @@ public class EggplantBlock extends CropBlock
     }
 
     @Override
-    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
+    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         int age = state.getValue(getAgeProperty());
         boolean isMature = age == getMaxAge();
-        if (isMature) {
+        if (!isMature && player.getItemInHand(hand).is(Items.BONE_MEAL)) {
+            return InteractionResult.PASS;
+        } else if (isMature) {
             int quantity = 1 + level.random.nextInt(2);
-            popResource(level, pos, new ItemStack(DumplingsDelightItems.EGGPLANT.get(), quantity));
+            Block.popResource(level, pos, new ItemStack(DumplingsDelightItems.EGGPLANT.get(), quantity));
 
             level.playSound(null, pos, ModSounds.ITEM_TOMATO_PICK_FROM_BUSH.get(), SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
             level.setBlock(pos, state.setValue(getAgeProperty(), 5), 2);
             return InteractionResult.SUCCESS;
         } else {
-            return super.useWithoutItem(state, level, pos, player, hit);
+            return super.use(state, level, pos, player, hand, hit);
         }
     }
 

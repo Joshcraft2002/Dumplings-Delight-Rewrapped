@@ -1,5 +1,6 @@
 package cn.foggyhillside.dumplings_delight.block;
 
+import cn.foggyhillside.dumplings_delight.registry.DumplingsDelightBlocks;
 import cn.foggyhillside.dumplings_delight.registry.DumplingsDelightItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
@@ -25,6 +26,11 @@ public class GarlicChiveBlock extends CropBlock
 
     public GarlicChiveBlock(Properties properties) {
         super(properties);
+    }
+
+    @Override
+    public BlockState getPlant(BlockGetter level, BlockPos pos) {
+        return DumplingsDelightBlocks.GARLIC_CHIVE.get().defaultBlockState();
     }
 
     @Override

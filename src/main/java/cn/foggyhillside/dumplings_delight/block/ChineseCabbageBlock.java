@@ -1,5 +1,6 @@
 package cn.foggyhillside.dumplings_delight.block;
 
+import cn.foggyhillside.dumplings_delight.registry.DumplingsDelightBlocks;
 import cn.foggyhillside.dumplings_delight.registry.DumplingsDelightItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
@@ -22,6 +23,11 @@ public class ChineseCabbageBlock extends CropBlock
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 10.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 11.0D, 16.0D)
     };
+
+    @Override
+    public BlockState getPlant(BlockGetter level, BlockPos pos) {
+        return DumplingsDelightBlocks.CHINESE_CABBAGES.get().defaultBlockState();
+    }
 
     public ChineseCabbageBlock(Properties properties) {
         super(properties);

@@ -1,7 +1,7 @@
 package cn.foggyhillside.dumplings_delight.registry;
 
 import cn.foggyhillside.dumplings_delight.DumplingsDelight;
-import io.github.fabricators_of_create.porting_lib.util.DeferredRegister;
+import io.github.fabricators_of_create.porting_lib.util.LazyRegistrar;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -11,7 +11,7 @@ import net.minecraft.world.item.ItemStack;
 import java.util.function.Supplier;
 
 public class DumplingsDelightCreativeTabs {
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, DumplingsDelight.MOD_ID);
+    public static final LazyRegistrar<CreativeModeTab> CREATIVE_MODE_TABS = LazyRegistrar.create(Registries.CREATIVE_MODE_TAB, DumplingsDelight.MOD_ID);
 
     public static final Supplier<CreativeModeTab> TAB_DUMPLINGS_DELIGHT = CREATIVE_MODE_TABS.register(DumplingsDelight.MOD_ID,
             () -> FabricItemGroup.builder()

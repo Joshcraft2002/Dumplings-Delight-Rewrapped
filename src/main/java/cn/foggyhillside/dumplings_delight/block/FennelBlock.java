@@ -1,5 +1,6 @@
 package cn.foggyhillside.dumplings_delight.block;
 
+import cn.foggyhillside.dumplings_delight.registry.DumplingsDelightBlocks;
 import cn.foggyhillside.dumplings_delight.registry.DumplingsDelightItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
@@ -25,6 +26,11 @@ public class FennelBlock extends CropBlock
 
     public FennelBlock(Properties properties) {
         super(properties);
+    }
+
+    @Override
+    public BlockState getPlant(BlockGetter level, BlockPos pos) {
+        return DumplingsDelightBlocks.FENNEL.get().defaultBlockState();
     }
 
     @Override
