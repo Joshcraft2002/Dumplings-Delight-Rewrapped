@@ -1,4 +1,4 @@
-package cn.foggyhillside.dumplings_delight.effect;
+package cn.foggyhillside.dumplings_delight.common.effect;
 
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;

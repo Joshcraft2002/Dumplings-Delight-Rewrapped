@@ -1,4 +1,4 @@
-package cn.foggyhillside.dumplings_delight.loot.modifier;
+package cn.foggyhillside.dumplings_delight.common.loot.modifier;
 
 import com.google.common.base.Suppliers;
 import com.mojang.serialization.MapCodec;

@@ -1,8 +1,8 @@
-package cn.foggyhillside.dumplings_delight.registry;
+package cn.foggyhillside.dumplings_delight.common.registry;
 
 import cn.foggyhillside.dumplings_delight.DumplingsDelight;
-import cn.foggyhillside.dumplings_delight.loot.modifier.AddCalamariModifier;
-import cn.foggyhillside.dumplings_delight.loot.modifier.DumplingsDelightAddTableLootModifier;
+import cn.foggyhillside.dumplings_delight.common.loot.modifier.AddCalamariModifier;
+import cn.foggyhillside.dumplings_delight.common.loot.modifier.DumplingsDelightAddTableLootModifier;
 import com.mojang.serialization.MapCodec;
 import io.github.fabricators_of_create.porting_lib.loot.IGlobalLootModifier;
 import io.github.fabricators_of_create.porting_lib.loot.PortingLibLoot;

@@ -1,12 +1,12 @@
-package cn.foggyhillside.dumplings_delight.event;
+package cn.foggyhillside.dumplings_delight.common.event;
 
-import cn.foggyhillside.dumplings_delight.registry.DumplingsDelightEffects;
+import cn.foggyhillside.dumplings_delight.common.registry.DumplingsDelightEffects;
 import io.github.fabricators_of_create.porting_lib.entity.events.living.LivingEntityUseItemEvent;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 
-import static cn.foggyhillside.dumplings_delight.tag.DumplingsDelightTags.DUMPLING;
+import static cn.foggyhillside.dumplings_delight.common.tag.DumplingsDelightTags.DUMPLING;
 
 public class CommonEvents {
     public static void init() {

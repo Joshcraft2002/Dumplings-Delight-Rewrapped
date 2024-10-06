@@ -1,7 +1,7 @@
-package cn.foggyhillside.dumplings_delight.event;
+package cn.foggyhillside.dumplings_delight.common.event;
 
 import cn.foggyhillside.dumplings_delight.DumplingsDelightConfig;
-import cn.foggyhillside.dumplings_delight.registry.DumplingsDelightItems;
+import cn.foggyhillside.dumplings_delight.common.registry.DumplingsDelightItems;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.minecraft.world.entity.npc.VillagerProfession;

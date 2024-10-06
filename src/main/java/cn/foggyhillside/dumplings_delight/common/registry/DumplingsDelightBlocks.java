@@ -1,11 +1,11 @@
-package cn.foggyhillside.dumplings_delight.registry;
+package cn.foggyhillside.dumplings_delight.common.registry;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import cn.foggyhillside.dumplings_delight.DumplingsDelight;
-import cn.foggyhillside.dumplings_delight.block.*;
+import cn.foggyhillside.dumplings_delight.common.block.*;
 import io.github.fabricators_of_create.porting_lib.util.DeferredRegister;
 
 import java.util.function.Supplier;

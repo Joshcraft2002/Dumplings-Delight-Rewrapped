@@ -1,4 +1,4 @@
-package cn.foggyhillside.dumplings_delight.registry;
+package cn.foggyhillside.dumplings_delight.common.registry;
 
 import cn.foggyhillside.dumplings_delight.DumplingsDelight;
 import io.github.fabricators_of_create.porting_lib.util.DeferredRegister;

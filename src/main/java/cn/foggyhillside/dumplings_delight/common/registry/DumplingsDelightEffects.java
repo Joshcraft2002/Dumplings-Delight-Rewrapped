@@ -1,7 +1,7 @@
-package cn.foggyhillside.dumplings_delight.registry;
+package cn.foggyhillside.dumplings_delight.common.registry;
 
 import cn.foggyhillside.dumplings_delight.DumplingsDelight;
-import cn.foggyhillside.dumplings_delight.effect.GarlicPotionEffect;
+import cn.foggyhillside.dumplings_delight.common.effect.GarlicPotionEffect;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;

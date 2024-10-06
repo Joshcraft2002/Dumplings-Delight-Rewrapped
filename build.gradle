@@ -3,8 +3,8 @@ plugins {
 	id 'maven-publish'
 }
 
-version = "${project.minecraft_version}-${project.mod_version}"
-group = project.maven_group
+version = project.mod_version + "+fabric"
+group = project.mod_group_id
 
 base {
 	archivesName = project.archives_base_name
@@ -21,30 +21,23 @@ repositories {
 	maven {	url "https://jitpack.io/" } // Fabric ASM
 }
 
-loom {
-	splitEnvironmentSourceSets()
-
-	mods {
-		"modid" {
-			sourceSet sourceSets.main
-			sourceSet sourceSets.client
-		}
-	}
-
-}
-
 dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	//mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
-	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	modImplementation "net.fabricmc:fabric-loader:${project.fabric_loader_version}"
 
 	mappings(loom.layered {
-		it.officialMojangMappings { nameSyntheticMembers = false }
-		it.parchment("org.parchmentmc.data:parchment-${parchment_version}")
+		it.officialMojangMappings {
+			setNameSyntheticMembers(false)
+		}
+		it.parchment("org.parchmentmc.data:parchment-${project.parchment_version}")
 	})
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
-	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+
+	for (String module in port_lib_modules.split(",")) {
+		include(modApi("io.github.fabricators_of_create.Porting-Lib:$module:$port_lib_version"))
+	}
 
 	// FD Refabricated
 	modImplementation ("vectorwing:FarmersDelight:${project.fdrf_version}") {
@@ -52,17 +45,34 @@ dependencies {
 	}
 
 	//for testing
-	//modLocalRuntime("curse.maven:appleskin-248787:5586598")
-	//modLocalRuntime("curse.maven:croptopia-415438:5571673")
-	//modLocalRuntime("curse.maven:epherolib-885449:5439828")
-	//modLocalRuntime("curse.maven:jei-238222:5623192")
+	modLocalRuntime("curse.maven:croptopia-415438:5571673")
+	modLocalRuntime("curse.maven:epherolib-885449:5439828")
+	modLocalRuntime("curse.maven:jei-238222:5623192")
 }
 
 processResources {
-	inputs.property "version", project.version
+	var replaceProperties = [
+			minecraft_version    : minecraft_version,
+			minecraft_min_version: minecraft_min_version,
+			minecraft_max_version: minecraft_max_version,
+
+			mod_id               : mod_id,
+			mod_name             : mod_name,
+			mod_version          : version,
+			mod_license          : mod_license,
+			mod_authors          : mod_authors,
+			mod_description      : mod_description,
+			mod_credits          : mod_credits,
+			mod_homepage         : mod_homepage,
+			mod_issues		     : mod_issues,
+			mod_github           : mod_github,
+			port_lib_version     : port_lib_version
+	]
+	// setting them as input
+	inputs.properties replaceProperties
 
 	filesMatching("fabric.mod.json") {
-		expand "version": project.version
+		expand replaceProperties + [project: project]
 	}
 }
 

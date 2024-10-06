@@ -1,8 +1,8 @@
-package cn.foggyhillside.dumplings_delight.registry;
+package cn.foggyhillside.dumplings_delight.common.registry;
 
 import cn.foggyhillside.dumplings_delight.DumplingsDelight;
-import cn.foggyhillside.dumplings_delight.item.DumplingsDelightFoodValues;
-import cn.foggyhillside.dumplings_delight.item.GarlicItem;
+import cn.foggyhillside.dumplings_delight.common.item.DumplingsDelightFoodValues;
+import cn.foggyhillside.dumplings_delight.common.item.GarlicItem;
 import com.google.common.collect.Sets;
 import io.github.fabricators_of_create.porting_lib.util.DeferredRegister;
 import net.minecraft.core.registries.Registries;

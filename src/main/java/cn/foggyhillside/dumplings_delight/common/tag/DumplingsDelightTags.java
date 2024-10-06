@@ -1,4 +1,4 @@
-package cn.foggyhillside.dumplings_delight.tag;
+package cn.foggyhillside.dumplings_delight.common.tag;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;

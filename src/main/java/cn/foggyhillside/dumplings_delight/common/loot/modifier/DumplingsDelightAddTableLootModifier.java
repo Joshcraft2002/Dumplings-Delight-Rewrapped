@@ -1,4 +1,4 @@
-package cn.foggyhillside.dumplings_delight.loot.modifier;
+package cn.foggyhillside.dumplings_delight.common.loot.modifier;
 
 import cn.foggyhillside.dumplings_delight.DumplingsDelightConfig;
 import com.google.common.base.Suppliers;

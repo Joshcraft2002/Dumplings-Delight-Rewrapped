@@ -1,7 +1,6 @@
-package cn.foggyhillside.dumplings_delight.block;
+package cn.foggyhillside.dumplings_delight.common.block;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -13,7 +12,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import cn.foggyhillside.dumplings_delight.registry.DumplingsDelightItems;
+import cn.foggyhillside.dumplings_delight.common.registry.DumplingsDelightItems;
 import vectorwing.farmersdelight.common.registry.ModSounds;
 
 public class EggplantBlock extends CropBlock

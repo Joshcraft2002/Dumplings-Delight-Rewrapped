@@ -1,6 +1,6 @@
-package cn.foggyhillside.dumplings_delight.block;
+package cn.foggyhillside.dumplings_delight.common.block;
 
-import cn.foggyhillside.dumplings_delight.registry.DumplingsDelightEffects;
+import cn.foggyhillside.dumplings_delight.common.registry.DumplingsDelightEffects;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;

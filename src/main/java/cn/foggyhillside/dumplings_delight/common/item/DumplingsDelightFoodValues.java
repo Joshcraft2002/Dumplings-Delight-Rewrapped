@@ -1,6 +1,6 @@
-package cn.foggyhillside.dumplings_delight.item;
+package cn.foggyhillside.dumplings_delight.common.item;
 
-import cn.foggyhillside.dumplings_delight.registry.DumplingsDelightEffects;
+import cn.foggyhillside.dumplings_delight.common.registry.DumplingsDelightEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
