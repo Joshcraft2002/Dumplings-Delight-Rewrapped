@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "dumplings_delight:garlic"
+    }
+  ],
+  "tool": {
+    "tag": "c:tools/knife"
+  },
+  "result": [
+    {
+      "item": "dumplings_delight:garlic_clove",
+      "count": 5
+    }
+  ]
+}

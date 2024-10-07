@@ -1,0 +1,24 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:foods/doughs"
+    },
+    {
+      "tag": "c:foods/raw_fishes/squid"
+    },
+    {
+      "item": "minecraft:brown_mushroom"
+    },
+    {
+      "tag": "c:crops/greenonion"
+    }
+  ],
+  "recipe_book_tab": "misc",
+  "result": {
+    "item": "dumplings_delight:calamari_boiled_dumpling",
+    "count": 2
+  }
+}

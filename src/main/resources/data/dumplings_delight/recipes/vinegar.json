@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "c:crops/rice"
+    },
+    {
+      "fabric:type": "fabric:nbt",
+      "base": {
+        "item": "minecraft:potion"
+      },
+      "nbt": "{Potion:\"minecraft:water\"}"
+    }
+  ],
+  "result": {
+    "item": "dumplings_delight:vinegar",
+    "count": 1
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:foods/doughs"
+    },
+    {
+      "tag": "c:eggs"
+    },
+    {
+      "tag": "c:crops/eggplant"
+    },
+    {
+      "tag": "c:crops/greenonion"
+    }
+  ],
+  "recipe_book_tab": "misc",
+  "result": {
+    "item": "dumplings_delight:eggplant_egg_boiled_dumpling",
+    "count": 2
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:foods/doughs"
+    },
+    {
+      "item": "minecraft:brown_mushroom"
+    },
+    {
+      "tag": "c:foods/raw_meats/raw_pork"
+    },
+    {
+      "tag": "c:crops/onion"
+    },
+    {
+    	"tag":"c:crops/potato"
+    }
+  ],
+  "recipe_book_tab": "misc",
+  "result": {
+    "item": "dumplings_delight:pork_potato_boiled_dumpling",
+    "count": 2
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:foods/doughs"
+    },
+    {
+      "tag": "c:foods/raw_meats/raw_pork"
+    },
+    {
+    	"item":"minecraft:brown_mushroom"
+    },
+    {
+      "tag": "c:crops/greenonion"
+    },
+    {
+    	"item":"minecraft:dried_kelp"  	
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "dumplings_delight:pork_mushroom_wonton",
+    "count": 1
+  }
+}

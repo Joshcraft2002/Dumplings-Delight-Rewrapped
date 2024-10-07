@@ -1,10 +1,10 @@
 package cn.foggyhillside.dumplings_delight;
 
-import cn.foggyhillside.dumplings_delight.event.*;
-import cn.foggyhillside.dumplings_delight.registry.*;
+import cn.foggyhillside.dumplings_delight.common.CompostableSetup;
+import cn.foggyhillside.dumplings_delight.common.event.*;
+import cn.foggyhillside.dumplings_delight.common.registry.*;
 import io.github.fabricators_of_create.porting_lib.config.ConfigRegistry;
 import io.github.fabricators_of_create.porting_lib.config.ConfigType;
-import io.github.fabricators_of_create.porting_lib.config.ModConfig;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.resources.ResourceLocation;
 
@@ -29,7 +29,7 @@ public class DumplingsDelight implements ModInitializer
         CommonEvents.init();
         VillagerEvents.init();
 
-        CompostableHelper.init();
+        CompostableSetup.init();
     }
 
 }

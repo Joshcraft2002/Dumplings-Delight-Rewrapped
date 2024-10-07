@@ -1,0 +1,24 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:foods/doughs"
+    },
+    {
+      "item": "minecraft:dandelion"
+    },
+    {
+      "tag": "c:eggs"
+    },
+    {
+      "item": "minecraft:brown_mushroom"
+    }	
+  ],
+  "result": {
+    "item": "dumplings_delight:dandelion_leaf_boiled_dumpling",
+    "count": 2
+  },
+  "recipe_book_tab": "misc"
+}

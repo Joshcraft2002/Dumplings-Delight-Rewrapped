@@ -1,0 +1,25 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:foods/doughs"
+    },
+    {
+      "tag": "c:crops/greenonion"
+    },
+    {
+      "tag": "c:foods/raw_meats/raw_beef"
+    },
+    {
+      "tag": "c:crops/tomato"
+    }
+  ],
+  "result": {
+    "item": "dumplings_delight:beef_tomato_boiled_dumpling",
+    "count": 2
+  },
+  "recipe_book_tab": "misc"
+
+}

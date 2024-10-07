@@ -1,0 +1,21 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:foods/doughs"
+    },
+    {
+      "tag": "c:foods/raw_meats/raw_mutton"
+    },
+    {
+      "tag": "c:crops/onion"
+    }
+  ],
+  "recipe_book_tab": "misc",
+  "result": {
+    "item": "dumplings_delight:mutton_boiled_dumpling",
+    "count": 2
+  }
+}

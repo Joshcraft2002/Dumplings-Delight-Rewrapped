@@ -21,6 +21,9 @@
 	"entrypoints": {
 		"main": [
 			"cn.foggyhillside.dumplings_delight.DumplingsDelight"
+		],
+		"client": [
+			"cn.foggyhillside.dumplings_delight.client.DumplingsDelightClient"
 		]
 	},
 	"depends": {

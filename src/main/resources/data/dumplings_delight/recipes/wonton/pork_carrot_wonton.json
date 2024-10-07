@@ -1,0 +1,27 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:foods/doughs"
+    },
+    {
+      "tag": "c:foods/raw_meats/raw_pork"
+    },
+    {
+      "tag": "c:eggs"
+    },
+    {
+    	"tag":"c:crops/carrot"
+    },
+    {
+    	"item":"minecraft:dried_kelp"  	
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "dumplings_delight:pork_carrot_wonton",
+    "count": 1
+  }
+}

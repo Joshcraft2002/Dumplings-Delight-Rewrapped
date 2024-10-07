@@ -1,0 +1,24 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:foods/doughs"
+    },
+    {
+      "tag": "c:foods/raw_fishes/cod"
+    },
+    {
+      "tag": "c:eggs"
+    },
+    {
+      "tag": "c:crops/greenonion"
+    }
+  ],
+  "result": {
+    "item": "dumplings_delight:cod_boiled_dumpling",
+    "count": 2
+  },
+  "recipe_book_tab": "misc"
+}

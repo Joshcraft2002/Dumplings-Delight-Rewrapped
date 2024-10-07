@@ -1,0 +1,32 @@
+{
+  "parent": "dumplings_delight:consume_dumpling",
+  "criteria": {
+    "dandelion_leaf_boiled_dumpling": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [ "dumplings_delight:dandelion_leaf_boiled_dumpling" ]
+        }
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "dumplings_delight.advancement.consume_dandelion_leaf_boiled_dumpling.desc"
+    },
+    "icon": {
+      "item": "dumplings_delight:dandelion_leaf_boiled_dumpling"
+    },
+    "title": {
+      "translate": "dumplings_delight.advancement.consume_dandelion_leaf_boiled_dumpling"
+    }
+  },
+  "requirements": [
+    [
+      "dandelion_leaf_boiled_dumpling"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

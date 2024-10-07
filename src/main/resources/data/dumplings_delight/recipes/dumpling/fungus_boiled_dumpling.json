@@ -1,0 +1,24 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:foods/doughs"
+    },
+    {
+      "item": "minecraft:crimson_fungus"
+    },
+    {
+     "item": "minecraft:warped_fungus"
+    },
+    {
+      "tag": "c:crops/greenonion"
+    }
+  ],
+  "recipe_book_tab": "misc",
+  "result": {
+    "item": "dumplings_delight:fungus_boiled_dumpling",
+    "count": 2
+  }
+}

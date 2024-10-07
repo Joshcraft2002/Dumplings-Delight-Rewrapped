@@ -1,0 +1,34 @@
+{
+  "parent": "dumplings_delight:consume_dumpling",
+  "criteria": {
+    "pufferfish_boiled_dumpling": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [ "dumplings_delight:pufferfish_boiled_dumpling" ]
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "dumplings_delight.advancement.get_pufferfish_boiled_dumpling.desc"
+    },
+    "icon": {
+      "item": "dumplings_delight:pufferfish_boiled_dumpling"
+    },
+    "title": {
+      "translate": "dumplings_delight.advancement.get_pufferfish_boiled_dumpling"
+    }
+  },
+  "requirements": [
+    [
+      "pufferfish_boiled_dumpling"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
+

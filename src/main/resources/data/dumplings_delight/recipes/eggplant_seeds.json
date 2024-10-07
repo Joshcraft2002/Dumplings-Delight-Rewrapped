@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    [
+      {
+        "item": "dumplings_delight:eggplant"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "item": "dumplings_delight:eggplant_seeds"
+  }
+}
