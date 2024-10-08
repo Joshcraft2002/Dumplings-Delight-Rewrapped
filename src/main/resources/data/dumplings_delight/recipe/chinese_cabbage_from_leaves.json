@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "dumplings_delight:chinese_cabbage_leaf"
+    },
+    {
+      "item": "dumplings_delight:chinese_cabbage_leaf"
+    },
+    {
+      "item": "dumplings_delight:chinese_cabbage_leaf"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dumplings_delight:chinese_cabbage"
+  }
+}

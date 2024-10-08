@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "dumplings_delight:garlic_clove"
+    },
+    {
+      "item": "dumplings_delight:garlic_clove"
+    },
+    {
+      "item": "dumplings_delight:garlic_clove"
+    },
+    {
+      "item": "dumplings_delight:garlic_clove"
+    },
+    {
+      "item": "dumplings_delight:garlic_clove"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dumplings_delight:garlic"
+  }
+}
