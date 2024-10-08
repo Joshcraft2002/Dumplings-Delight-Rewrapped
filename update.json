@@ -1,15 +1,16 @@
 {
   "homepage": "https://modrinth.com/mod/dumplings-delight-rewrapped",
   "1.21.1": {
+    "1.1.2": "chinese cabbage & garlic recraft, recipe & tag adjustments",
     "1.1.1": "greenonion, garlic tag & celery dumpling recipe fix",
     "1.1.0": "crops can now be traded with villagers and wandering traders",
     "1.0.1": "fixed crops missing from village loot",
     "1.0.0": "first full port to 1.21"
   },
   "promos": {
-    "1.21.1-latest": "1.1.1",
-    "1.21.1-recommended": "1.1.1",
-    "1.21-latest": "1.1.1",
-    "1.21-recommended": "1.1.1"
+    "1.21.1-latest": "1.1.2",
+    "1.21.1-recommended": "1.1.2",
+    "1.21-latest": "1.1.2",
+    "1.21-recommended": "1.1.2"
   }
 }

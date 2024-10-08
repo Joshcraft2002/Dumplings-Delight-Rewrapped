@@ -1,16 +1,17 @@
 modLoader="javafml" #mandatory
 loaderVersion="${loader_version_range}" #mandatory
 license="${mod_license}"
-issueTrackerURL="https://github.com/Joshcraft2002/Dumplings-Delight-Rewrapped/issues" #optional
+issueTrackerURL="${mod_issues}"
 
 [[mods]] #mandatory
 modId="${mod_id}"
 version="${mod_version}"
 displayName="${mod_name}"
-updateJSONURL="https://raw.githubusercontent.com/Joshcraft2002/Dumplings-Delight-Rewrapped/main/update.json"
+displayURL="${mod_homepage}"
+updateJSONURL="${update_json_url}"
 logoFile="logo.png"
 logoBlur=false
-credits="FoggyHillSide as original mod author"
+credits="${mod_credits}"
 authors="${mod_authors}"
 description='''${mod_description}'''
 
