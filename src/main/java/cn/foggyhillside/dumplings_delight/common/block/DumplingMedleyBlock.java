@@ -30,6 +30,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import java.util.Collection;
 
+@SuppressWarnings("deprecation")
 public class DumplingMedleyBlock extends Block {
 
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
@@ -92,7 +93,7 @@ public class DumplingMedleyBlock extends Block {
                 player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 50, 0));
                 if (!player.getAbilities().instabuild)
                 {
-                    if (garlic(player)) { player.getFoodData().setFoodLevel(player.getFoodData().getFoodLevel() + 6); }
+                    if (hasGarlicEffect(player)) { player.getFoodData().setFoodLevel(player.getFoodData().getFoodLevel() + 6); }
                     else { player.getFoodData().setFoodLevel(player.getFoodData().getFoodLevel() + 5); }
                     player.getFoodData().setSaturation(player.getFoodData().getSaturationLevel() + 5 * 2 * 0.7F);
                 }
@@ -104,7 +105,7 @@ public class DumplingMedleyBlock extends Block {
                 player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 50, 0));
                 if (!player.getAbilities().instabuild)
                 {
-                    if (garlic(player)) { player.getFoodData().setFoodLevel(player.getFoodData().getFoodLevel() + 7); }
+                    if (hasGarlicEffect(player)) { player.getFoodData().setFoodLevel(player.getFoodData().getFoodLevel() + 7); }
                     else { player.getFoodData().setFoodLevel(player.getFoodData().getFoodLevel() + 6); }
                     player.getFoodData().setSaturation(player.getFoodData().getSaturationLevel() + 5 * 2 * 0.7F);
                 }
@@ -116,7 +117,7 @@ public class DumplingMedleyBlock extends Block {
                 player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 50, 0));
                 if (!player.getAbilities().instabuild)
                 {
-                    if (garlic(player)) { player.getFoodData().setFoodLevel(player.getFoodData().getFoodLevel() + 9); }
+                    if (hasGarlicEffect(player)) { player.getFoodData().setFoodLevel(player.getFoodData().getFoodLevel() + 9); }
                     else { player.getFoodData().setFoodLevel(player.getFoodData().getFoodLevel() + 8); }
                     player.getFoodData().setSaturation(player.getFoodData().getSaturationLevel() + 5 * 2 * 0.7F);
                 }
@@ -128,12 +129,8 @@ public class DumplingMedleyBlock extends Block {
         return InteractionResult.PASS;
     }
 
-    public boolean garlic(Player player) {
-        Collection<MobEffectInstance> effects = player.getActiveEffects();
-        for (MobEffectInstance effect : effects) {
-            if (effect.getEffect() == DumplingsDelightEffects.GARLIC) { return true; }
-        }
-        return false;
+    public boolean hasGarlicEffect(Player player) {
+        return player.hasEffect(DumplingsDelightEffects.GARLIC.get());
     }
 
     @Override

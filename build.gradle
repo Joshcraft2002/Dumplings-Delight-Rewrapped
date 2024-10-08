@@ -33,8 +33,8 @@ repositories {
 			excludeGroup "io.github.fabricators_of_create"
 		}
 	}
-	maven { url "https://maven.shedaniel.me/" } // Cloth Config (for AppleSkin)
-	maven { url "https://maven.ryanliptak.com/" } // AppleSkin
+	//maven { url "https://maven.shedaniel.me/" } // Cloth Config (for AppleSkin)
+	//maven { url "https://maven.ryanliptak.com/" } // AppleSkin
 }
 
 dependencies {
@@ -59,10 +59,10 @@ dependencies {
 	}
 
 	//for testing
-	modLocalRuntime("squeek.appleskin:appleskin-fabric:mc1.20-2.5.1") { exclude module: 'modmenu' }
-	modLocalRuntime("curse.maven:croptopia-415438:4997461")
-	modLocalRuntime("curse.maven:epherolib-885449:4949797")
-	modLocalRuntime("curse.maven:jei-238222:4585877")
+	//modLocalRuntime("squeek.appleskin:appleskin-fabric:mc1.20-2.5.1") { exclude module: 'modmenu' }
+	//modLocalRuntime("curse.maven:croptopia-415438:4997461")
+	//modLocalRuntime("curse.maven:epherolib-885449:4949797")
+	//modLocalRuntime("curse.maven:jei-238222:4585877")
 }
 
 processResources {
