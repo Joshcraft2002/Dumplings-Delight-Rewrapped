@@ -6,6 +6,7 @@ A port of [Dumpling's Delight](https://modrinth.com/mod/dumplings-delight) by [F
 
 - toned down wonton food value
 - rabbit meat dumpling now takes either rabbit meat or foot instead of both
+- chinese cabbage and garlic can be re-crafted from their leaves and cloves respectively
 - crops and dumplings now compostable
 - villagers and wandering traders can trade crops and seeds (configurable)
 - using 'c' namespace tags
