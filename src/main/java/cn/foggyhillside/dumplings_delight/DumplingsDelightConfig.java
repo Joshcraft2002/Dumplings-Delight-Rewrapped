@@ -9,6 +9,7 @@ public class DumplingsDelightConfig {
     public static ModConfigSpec.BooleanValue FARMERS_BUY_DUMPLINGS_DELIGHT_CROPS;
     public static ModConfigSpec.BooleanValue WANDERING_TRADER_SELLS_DUMPLINGS_DELIGHT_ITEMS;
     public static ModConfigSpec.BooleanValue GENERATE_DUMPLINGS_DELIGHT_CHEST_LOOT;
+    public static ModConfigSpec.BooleanValue CALAMARI_DROPS_FROM_SQUID;
 
     static {
         ModConfigSpec.Builder COMMON_BUILDER = new ModConfigSpec.Builder();
@@ -19,6 +20,8 @@ public class DumplingsDelightConfig {
                 .define("wanderingTraderSellsDumplingsDelightItems", true);
         GENERATE_DUMPLINGS_DELIGHT_CHEST_LOOT = COMMON_BUILDER.comment("Should this mod add some of its items (crop seeds, garlic, green onions) as extra chest loot across Minecraft?")
                 .define("generateDumplingsDelightChestLoot", true);
+        CALAMARI_DROPS_FROM_SQUID = COMMON_BUILDER.comment("Should calamari drop from squids and glow squids?")
+                .define("calamariDropsFromSquid", true);
 
         COMMON_CONFIG = COMMON_BUILDER.build();
     }

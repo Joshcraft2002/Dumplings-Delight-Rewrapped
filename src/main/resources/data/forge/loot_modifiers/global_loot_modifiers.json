@@ -1,7 +1,8 @@
 {
   "replace": false,
   "entries": [
-    "dumplings_delight:add_calamari",
+    "dumplings_delight:add_calamari_squid",
+    "dumplings_delight:add_calamari_glow_squid",
     "dumplings_delight:add_loot_village_desert_house",
     "dumplings_delight:add_loot_village_plains_house",
     "dumplings_delight:add_loot_village_savanna_house",
