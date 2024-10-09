@@ -14,7 +14,6 @@ version = "${minecraft_version}-${mod_version}"
 group = mod_group_id
 
 repositories {
-    //maven { url = "https://dvs1.progwml6.com/files/maven/" } // JEI
     //maven { url "https://maven.ryanliptak.com/" } // AppleSkin
     maven { url "https://www.cursemaven.com" }
 }

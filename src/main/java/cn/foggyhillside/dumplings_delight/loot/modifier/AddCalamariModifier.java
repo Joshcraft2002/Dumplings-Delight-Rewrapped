@@ -1,5 +1,6 @@
 package cn.foggyhillside.dumplings_delight.loot.modifier;
 
+import cn.foggyhillside.dumplings_delight.DumplingsDelightConfig;
 import com.google.common.base.Suppliers;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
@@ -31,9 +32,11 @@ public class AddCalamariModifier extends LootModifier {
     @Nonnull
     @Override
     protected ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
-        generatedLoot.add(new ItemStack(item, 1));
-        if (context.getRandom().nextFloat() > 0.7) {
+        if (DumplingsDelightConfig.CALAMARI_DROPS_FROM_SQUID.get()) {
             generatedLoot.add(new ItemStack(item, 1));
+            if (context.getRandom().nextFloat() > 0.7) {
+                generatedLoot.add(new ItemStack(item, 1));
+            }
         }
         return generatedLoot;
     }
