@@ -17,7 +17,7 @@ repositories {
 	}
 	maven { url "https://maven.parchmentmc.org" } // Parchment mappings
 	maven { url 'https://repo.greenhouse.house/releases/' } //FD Refabricated
-	maven { url 'https://repo.greenhouse.house/snapshots/' } //Porting Lib 1.21
+	maven { url 'https://repo.greenhouse.house/snapshots/' } //Temp Porting Lib 1.21 fork
 	maven {	url "https://jitpack.io/" } // Fabric ASM
 
 }
@@ -37,7 +37,7 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
 	for (String module in port_lib_modules.split(",")) {
-		include(modApi("io.github.fabricators_of_create.Porting-Lib:$module:$port_lib_version"))
+		modApi("io.github.fabricators_of_create.Porting-Lib:$module:$port_lib_version")
 	}
 
 	// FD Refabricated
