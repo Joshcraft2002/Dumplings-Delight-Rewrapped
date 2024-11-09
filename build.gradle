@@ -67,6 +67,8 @@ processResources {
 			mod_homepage         : mod_homepage,
 			mod_issues		     : mod_issues,
 			mod_github           : mod_github,
+			fabric_loader_version: fabric_loader_version,
+			fdrf_version		 : fdrf_version,
 			port_lib_version     : port_lib_version
 	]
 	// setting them as input
