@@ -1,25 +1,23 @@
 package cn.foggyhillside.dumplings_delight.common.event;
 
 import cn.foggyhillside.dumplings_delight.common.registry.DumplingsDelightEffects;
-import io.github.fabricators_of_create.porting_lib.entity.events.living.LivingEntityUseItemEvent;
-import net.minecraft.world.entity.Entity;
+import cn.foggyhillside.dumplings_delight.common.tag.DumplingsDelightTags;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-
-import static cn.foggyhillside.dumplings_delight.common.tag.DumplingsDelightTags.DUMPLING;
+import net.minecraft.world.level.Level;
 
 public class CommonEvents {
-    public static void init() {
-        LivingEntityUseItemEvent.Finish.EVENT.register(CommonEvents::handleGarlicEffect);
+
+    public static void onItemUseFinished(Level level, LivingEntity livingEntity, ItemStack stack) {
+        handleGarlicEffect(livingEntity, stack);
     }
 
-    public static void handleGarlicEffect(LivingEntityUseItemEvent.Finish event) {
-        Entity entity = event.getEntity();
-        if (!(entity instanceof Player)) return;
+    public static void handleGarlicEffect(LivingEntity livingEntity, ItemStack stack) {
+        if (!(livingEntity instanceof Player)) return;
 
-        ItemStack itemStack = event.getItem();
-        if (itemStack.is(DUMPLING) && ((Player) entity).hasEffect(DumplingsDelightEffects.GARLIC)) {
-            ((Player) entity).getFoodData().setFoodLevel((((Player) entity).getFoodData().getFoodLevel() + 1));
+        if (stack.is(DumplingsDelightTags.DUMPLING) && livingEntity.hasEffect(DumplingsDelightEffects.GARLIC)) {
+            ((Player) livingEntity).getFoodData().setFoodLevel((((Player) livingEntity).getFoodData().getFoodLevel() + 1));
         }
     }
 }

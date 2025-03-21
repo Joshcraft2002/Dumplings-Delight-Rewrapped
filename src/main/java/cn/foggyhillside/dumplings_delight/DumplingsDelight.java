@@ -2,8 +2,7 @@ package cn.foggyhillside.dumplings_delight;
 
 import cn.foggyhillside.dumplings_delight.common.event.*;
 import cn.foggyhillside.dumplings_delight.common.registry.*;
-import io.github.fabricators_of_create.porting_lib.config.ConfigRegistry;
-import io.github.fabricators_of_create.porting_lib.config.ModConfig;
+import cn.foggyhillside.dumplings_delight.refabricated.DumplingsDelightLootModificationEvents;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.resources.ResourceLocation;
 
@@ -17,16 +16,16 @@ public class DumplingsDelight implements ModInitializer
 
     @Override
     public void onInitialize() {
-        ConfigRegistry.registerConfig(MOD_ID, ModConfig.Type.COMMON, DumplingsDelightConfig.COMMON_CONFIG);
+        DumplingsDelightConfig.touch();
 
-        DumplingsDelightBlocks.BLOCKS.register();
-        DumplingsDelightCreativeTabs.CREATIVE_MODE_TABS.register();
-        DumplingsDelightEffects.register();
-        DumplingsDelightItems.ITEMS.register();
-        DumplingsDelightLootModifiers.LOOT_MODIFIERS.register();
+        DumplingsDelightBlocks.touch();
+        DumplingsDelightCreativeTabs.touch();
+        DumplingsDelightEffects.touch();
+        DumplingsDelightItems.touch();
 
-        CommonEvents.init();
         VillagerEvents.init();
+
+        DumplingsDelightLootModificationEvents.init();
 
         CompostableHelper.init();
     }

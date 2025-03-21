@@ -10,6 +10,6 @@ import net.minecraft.world.effect.MobEffect;
 public class DumplingsDelightEffects {
     public static final Holder<MobEffect> GARLIC = Registry.registerForHolder(BuiltInRegistries.MOB_EFFECT, DumplingsDelight.res("garlic"), new GarlicPotionEffect());
 
-    public static void register() {
+    public static void touch() {
     }
 }

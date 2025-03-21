@@ -1,11 +1,8 @@
 package cn.foggyhillside.dumplings_delight.common.registry;
 
-import cn.foggyhillside.dumplings_delight.DumplingsDelight;
 import cn.foggyhillside.dumplings_delight.common.item.DumplingsDelightFoodValues;
 import cn.foggyhillside.dumplings_delight.common.item.GarlicItem;
 import com.google.common.collect.Sets;
-import io.github.fabricators_of_create.porting_lib.util.DeferredRegister;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -14,13 +11,14 @@ import vectorwing.farmersdelight.common.item.ConsumableItem;
 import java.util.LinkedHashSet;
 import java.util.function.Supplier;
 
+import static cn.foggyhillside.dumplings_delight.refabricated.DumplingsDelightRegUtils.regItem;
+
 public class DumplingsDelightItems {
 
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(Registries.ITEM, DumplingsDelight.MOD_ID);
     public static LinkedHashSet<Supplier<Item>> CREATIVE_TAB_ITEMS = Sets.newLinkedHashSet();
 
     public static Supplier<Item> registerWithTab(final String name, final Supplier<Item> supplier) {
-        Supplier<Item> block = ITEMS.register(name, supplier);
+        Supplier<Item> block = regItem(name, supplier);
         CREATIVE_TAB_ITEMS.add(block);
         return block;
     }
@@ -120,4 +118,8 @@ public class DumplingsDelightItems {
             () -> new ConsumableItem(new Item.Properties().food(DumplingsDelightFoodValues.PORK_MUSHROOM_WONTON).craftRemainder(Items.BOWL).stacksTo(16), true));
     public static final Supplier<Item> PORK_CABBAGE_WONTON = registerWithTab("pork_cabbage_wonton",
             () -> new ConsumableItem(new Item.Properties().food(DumplingsDelightFoodValues.PORK_CABBAGE_WONTON).craftRemainder(Items.BOWL).stacksTo(16), true));
+
+    public static void touch() {
+
+    }
 }

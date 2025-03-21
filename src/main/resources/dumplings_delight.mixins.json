@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "cn.foggyhillside.dumplings_delight.common.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "refabricated.ItemStackMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}
