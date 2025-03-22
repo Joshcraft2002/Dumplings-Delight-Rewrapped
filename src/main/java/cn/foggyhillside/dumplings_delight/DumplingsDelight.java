@@ -1,10 +1,12 @@
 package cn.foggyhillside.dumplings_delight;
 
 import cn.foggyhillside.dumplings_delight.registry.*;
+import cn.foggyhillside.dumplings_delight.world.VillageStructures;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
+import net.neoforged.neoforge.common.NeoForge;
 
 @Mod(DumplingsDelight.MOD_ID)
 public class DumplingsDelight
@@ -21,6 +23,8 @@ public class DumplingsDelight
         DumplingsDelightEffects.EFFECTS.register(modEventBus);
         DumplingsDelightCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
         DumplingsDelightLootModifiers.LOOT_MODIFIERS.register(modEventBus);
+
+        NeoForge.EVENT_BUS.addListener(VillageStructures::addNewVillageBuilding);
     }
 
 }

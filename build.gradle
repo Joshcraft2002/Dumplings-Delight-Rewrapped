@@ -85,7 +85,7 @@ configurations {
 dependencies {
     implementation "net.neoforged:neoforge:${neo_version}"
 
-    implementation "curse.maven:farmersdelight-398521:5566383"
+    implementation "curse.maven:farmers-delight-398521:${farmersdelight_version}"
 
     // for testing
     //localRuntime "squeek.appleskin:appleskin-neoforge:mc1.21-3.0.5"

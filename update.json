@@ -1,6 +1,7 @@
 {
   "homepage": "https://modrinth.com/mod/dumplings-delight-rewrapped",
   "1.21.1": {
+    "1.3.0": "villagers plant crops, crop gen in village, calamari drops as loot table, add pt_br",
     "1.2.1": "add ru_ru",
     "1.2.0": "calamari from glow squid & drop config, raw calamari tag, add vi_vn",
     "1.1.2": "chinese cabbage & garlic recraft, recipe & tag adjustments",
@@ -10,9 +11,9 @@
     "1.0.0": "first full port to 1.21"
   },
   "promos": {
-    "1.21.1-latest": "1.2.1",
-    "1.21.1-recommended": "1.2.1",
-    "1.21-latest": "1.2.1",
-    "1.21-recommended": "1.2.1"
+    "1.21.1-latest": "1.3.0",
+    "1.21.1-recommended": "1.3.0",
+    "1.21-latest": "1.3.0",
+    "1.21-recommended": "1.3.0"
   }
 }
