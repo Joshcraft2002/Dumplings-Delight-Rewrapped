@@ -3,6 +3,7 @@ package cn.foggyhillside.dumplings_delight;
 import cn.foggyhillside.dumplings_delight.common.CommonSetup;
 import cn.foggyhillside.dumplings_delight.common.event.*;
 import cn.foggyhillside.dumplings_delight.common.registry.*;
+import cn.foggyhillside.dumplings_delight.common.world.VillageStructures;
 import cn.foggyhillside.dumplings_delight.refabricated.DumplingsDelightLootModificationEvents;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.resources.ResourceLocation;
@@ -24,6 +25,7 @@ public class DumplingsDelight implements ModInitializer
         DumplingsDelightEffects.touch();
         DumplingsDelightItems.touch();
 
+        VillageStructures.init();
         VillagerEvents.init();
 
         CommonSetup.registerItemSetAdditions();
