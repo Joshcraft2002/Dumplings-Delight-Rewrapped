@@ -13,6 +13,7 @@ public class DumplingsDelight
 
     public DumplingsDelight(IEventBus modEventBus, ModContainer modContainer)
     {
+        modEventBus.addListener(CommonSetup::init);
         modContainer.registerConfig(ModConfig.Type.COMMON, DumplingsDelightConfig.COMMON_CONFIG);
 
         DumplingsDelightItems.ITEMS.register(modEventBus);
