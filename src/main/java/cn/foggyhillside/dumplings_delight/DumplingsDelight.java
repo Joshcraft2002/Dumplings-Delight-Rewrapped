@@ -1,5 +1,6 @@
 package cn.foggyhillside.dumplings_delight;
 
+import cn.foggyhillside.dumplings_delight.common.CommonSetup;
 import cn.foggyhillside.dumplings_delight.common.event.*;
 import cn.foggyhillside.dumplings_delight.common.registry.*;
 import cn.foggyhillside.dumplings_delight.refabricated.DumplingsDelightLootModificationEvents;
@@ -24,6 +25,8 @@ public class DumplingsDelight implements ModInitializer
         DumplingsDelightItems.touch();
 
         VillagerEvents.init();
+
+        CommonSetup.registerItemSetAdditions();
 
         DumplingsDelightLootModificationEvents.init();
 
