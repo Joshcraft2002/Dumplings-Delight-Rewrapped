@@ -26,6 +26,7 @@
 			"cn.foggyhillside.dumplings_delight.client.DumplingsDelightClient"
 		]
 	},
+	"accessWidener": "${mod_id}.accesswidener",
 	"depends": {
 		"fabric": "*",
 		"minecraft": ">=${minecraft_min_version} <${minecraft_max_version}",

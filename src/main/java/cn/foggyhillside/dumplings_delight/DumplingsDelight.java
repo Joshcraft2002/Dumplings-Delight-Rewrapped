@@ -1,6 +1,6 @@
 package cn.foggyhillside.dumplings_delight;
 
-import cn.foggyhillside.dumplings_delight.common.CompostableSetup;
+import cn.foggyhillside.dumplings_delight.common.CommonSetup;
 import cn.foggyhillside.dumplings_delight.common.event.*;
 import cn.foggyhillside.dumplings_delight.common.registry.*;
 import io.github.fabricators_of_create.porting_lib.config.ConfigRegistry;
@@ -29,7 +29,7 @@ public class DumplingsDelight implements ModInitializer
         CommonEvents.init();
         VillagerEvents.init();
 
-        CompostableSetup.init();
+        CommonSetup.init();
     }
 
 }

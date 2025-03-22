@@ -1,10 +1,28 @@
 package cn.foggyhillside.dumplings_delight.common;
 
 import cn.foggyhillside.dumplings_delight.common.registry.DumplingsDelightItems;
+import com.google.common.collect.ImmutableSet;
+import com.google.common.collect.Sets;
+import net.minecraft.world.entity.animal.Chicken;
+import net.minecraft.world.entity.animal.Parrot;
+import net.minecraft.world.entity.animal.Pig;
+import net.minecraft.world.entity.npc.Villager;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.ComposterBlock;
 
-public class CompostableSetup {
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Set;
+import java.util.stream.Stream;
+
+public class CommonSetup {
     public static void init() {
+        registerCompostables();
+        registerItemSetAdditions();
+    }
+
+    public static void registerCompostables() {
         // 15% chance
         ComposterBlock.COMPOSTABLES.put(DumplingsDelightItems.GARLIC_CLOVE.get(), 0.15F);
 
@@ -45,5 +63,29 @@ public class CompostableSetup {
         ComposterBlock.COMPOSTABLES.put(DumplingsDelightItems.RABBIT_MEAT_BOILED_DUMPLING.get(), 1.0F);
         ComposterBlock.COMPOSTABLES.put(DumplingsDelightItems.SALMON_BOILED_DUMPLING.get(), 1.0F);
         ComposterBlock.COMPOSTABLES.put(DumplingsDelightItems.TOMATO_EGG_BOILED_DUMPLING.get(), 1.0F);
+    }
+
+    public static void registerItemSetAdditions() {
+        Ingredient newChickenFood = Ingredient.of(DumplingsDelightItems.CHINESE_CABBAGE_SEEDS.get(), DumplingsDelightItems.EGGPLANT_SEEDS.get(), DumplingsDelightItems.FENNEL_SEEDS.get(), DumplingsDelightItems.GARLIC_CHIVE_SEEDS.get());
+        Chicken.FOOD_ITEMS = Ingredient.of(Stream.concat(Arrays.stream(Chicken.FOOD_ITEMS.getItems()), Arrays.stream(newChickenFood.getItems())));
+
+        Ingredient newPigFood = Ingredient.of(DumplingsDelightItems.CHINESE_CABBAGE.get(), DumplingsDelightItems.EGGPLANT.get());
+        Pig.FOOD_ITEMS = Ingredient.of(Stream.concat(Arrays.stream(Pig.FOOD_ITEMS.getItems()), Arrays.stream(newPigFood.getItems())));
+
+        Collections.addAll(Parrot.TAME_FOOD, DumplingsDelightItems.CHINESE_CABBAGE_SEEDS.get(), DumplingsDelightItems.EGGPLANT_SEEDS.get(), DumplingsDelightItems.FENNEL_SEEDS.get(), DumplingsDelightItems.GARLIC_CHIVE_SEEDS.get());
+
+        Set<Item> newWantedItems = Sets.newHashSet(
+                DumplingsDelightItems.CHINESE_CABBAGE.get(),
+                DumplingsDelightItems.GARLIC.get(),
+                DumplingsDelightItems.GREENONION.get(),
+                DumplingsDelightItems.EGGPLANT.get(),
+                DumplingsDelightItems.GARLIC_CHIVE.get(),
+                DumplingsDelightItems.FENNEL.get(),
+                DumplingsDelightItems.CHINESE_CABBAGE_SEEDS.get(),
+                DumplingsDelightItems.EGGPLANT_SEEDS.get(),
+                DumplingsDelightItems.GARLIC_CHIVE_SEEDS.get(),
+                DumplingsDelightItems.FENNEL_SEEDS.get());
+        newWantedItems.addAll(Villager.WANTED_ITEMS);
+        Villager.WANTED_ITEMS = ImmutableSet.copyOf(newWantedItems);
     }
 }
