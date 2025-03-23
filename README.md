@@ -18,10 +18,12 @@ A port of [Dumpling's Delight](https://modrinth.com/mod/dumplings-delight) by [F
 - crops, seeds, and dumplings now compostable
 - villagers and wandering traders can trade (configurable) and plant crops and seeds
 - villages occasionally can generate with crops on their farms (configurable)
+- calamari loot modifier now uses a loot table instead of hardcoded item drop
+  - changed drop calculations, and is now affected by looting
 - glow squids also drop calamari in addition to regular squids
 - using 'c' namespace tags
 - [Serene Seasons](https://modrinth.com/mod/serene-seasons) support
-- config for crops appearing as chest loot, and whether squids drop calamari
+- config for crops appearing as chest loot
 - some advancement adjustments
 - additional language support
 

@@ -1,10 +1,10 @@
 {
-  "type": "dumplings_delight:add_calamari",
+  "type": "dumplings_delight:add_table",
   "conditions": [
     {
       "condition": "porting_lib:loot_table_id",
       "loot_table_id": "minecraft:entities/glow_squid"
     }
   ],
-  "item": "dumplings_delight:calamari"
+  "table": "dumplings_delight:entities/ed_glow_squid"
 }
