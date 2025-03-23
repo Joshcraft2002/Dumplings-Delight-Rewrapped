@@ -16,14 +16,14 @@ A port of [Dumpling's Delight](https://modrinth.com/mod/dumplings-delight) by [F
 - rabbit meat dumpling now takes either rabbit meat or foot instead of both
 - chinese cabbage and garlic can be re-crafted from their leaves and cloves respectively
 - crops, seeds, and dumplings now compostable
-- villagers and wandering traders can trade (configurable) and plant crops and seeds 
+- villagers and wandering traders can trade (configurable) and plant crops and seeds
 - villages occasionally can generate with crops on their farms (configurable)
-- calamari loot drop now handled by loot table
+- calamari loot modifier now uses a loot table instead of hardcoded item drop
   - changed drop calculations, and is now affected by looting
 - glow squids also drop calamari in addition to regular squids
 - using 'c' namespace tags
 - [Serene Seasons](https://modrinth.com/mod/serene-seasons) support
-- config for crops appearing as chest loot, and whether squids drop calamari
+- config for crops appearing as chest loot
 - some advancement adjustments
 - additional language support
 

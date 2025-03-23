@@ -66,12 +66,10 @@ public class DumplingsDelightLootModificationEvents {
     }
 
     private static void scavengingLoot(ResourceKey<LootTable> key, LootTable.Builder tableBuilder, LootTableSource source, HolderLookup.Provider registries) {
-        if (DumplingsDelightConfig.CALAMARI_DROPS_FROM_SQUID.get()) {
-            if (key == ENTITIES_SQUID)
-                tableBuilder.withPool(LootPool.lootPool().add(NestedLootTable.lootTableReference(ED_SQUID)));
-            if (key == ENTITIES_GLOW_SQUID)
-                tableBuilder.withPool(LootPool.lootPool().add(NestedLootTable.lootTableReference(ED_GLOW_SQUID)));
-        }
+        if (key == ENTITIES_SQUID)
+            tableBuilder.withPool(LootPool.lootPool().add(NestedLootTable.lootTableReference(ED_SQUID)));
+        if (key == ENTITIES_GLOW_SQUID)
+            tableBuilder.withPool(LootPool.lootPool().add(NestedLootTable.lootTableReference(ED_GLOW_SQUID)));
     }
 
     private static ResourceKey<LootTable> vanillaKey(String path) {

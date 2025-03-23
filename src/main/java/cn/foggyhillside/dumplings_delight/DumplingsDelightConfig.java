@@ -13,7 +13,6 @@ public class DumplingsDelightConfig {
     public static final String CATEGORY_SETTINGS = "settings";
     public static Supplier<Boolean> FARMERS_BUY_DUMPLINGS_DELIGHT_CROPS;
     public static Supplier<Boolean> WANDERING_TRADER_SELLS_DUMPLINGS_DELIGHT_ITEMS;
-    public static Supplier<Boolean> CALAMARI_DROPS_FROM_SQUID;
 
     public static final String CATEGORY_WORLD = "world";
     public static Supplier<Boolean> GENERATE_DUMPLINGS_DELIGHT_CHEST_LOOT;
@@ -27,8 +26,6 @@ public class DumplingsDelightConfig {
                 .define("farmersBuyDumplingsDelightCrops", true);
         WANDERING_TRADER_SELLS_DUMPLINGS_DELIGHT_ITEMS = builder.comment("Should the Wandering Trader sell crop seeds, garlic, green onions?")
                 .define("wanderingTraderSellsDumplingsDelightItems", true);
-        CALAMARI_DROPS_FROM_SQUID = builder.comment("Should calamari drop from squids and glow squids?")
-                .define("calamariDropsFromSquid", true);
         builder.pop();
 
         builder.comment("World generation").push(CATEGORY_WORLD);
