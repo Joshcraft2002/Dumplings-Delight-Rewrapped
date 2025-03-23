@@ -3,6 +3,7 @@ package cn.foggyhillside.dumplings_delight;
 import cn.foggyhillside.dumplings_delight.common.CommonSetup;
 import cn.foggyhillside.dumplings_delight.common.event.*;
 import cn.foggyhillside.dumplings_delight.common.registry.*;
+import cn.foggyhillside.dumplings_delight.common.world.VillageStructures;
 import io.github.fabricators_of_create.porting_lib.config.ConfigRegistry;
 import io.github.fabricators_of_create.porting_lib.config.ConfigType;
 import net.fabricmc.api.ModInitializer;
@@ -16,6 +17,7 @@ public class DumplingsDelight implements ModInitializer
         return new ResourceLocation(MOD_ID, name);
     }
 
+    @SuppressWarnings("UnstableApiUsage")
     @Override
     public void onInitialize() {
         ConfigRegistry.registerConfig(MOD_ID, ConfigType.COMMON, DumplingsDelightConfig.COMMON_CONFIG);
@@ -26,6 +28,7 @@ public class DumplingsDelight implements ModInitializer
         DumplingsDelightItems.ITEMS.register();
         DumplingsDelightLootModifiers.LOOT_MODIFIERS.register();
 
+        VillageStructures.init();
         CommonEvents.init();
         VillagerEvents.init();
 
