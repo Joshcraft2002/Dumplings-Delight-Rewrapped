@@ -2,6 +2,14 @@
 A port of [Dumpling's Delight](https://modrinth.com/mod/dumplings-delight) by [FoggyHillSide](https://modrinth.com/user/FoggyHillside), bringing it to a newer minecraft version but also making slight changes to improve it.
 
 <details>
+<summary>Obtaining Crops & Seeds</summary>
+
+- Seeds can be found in village houses, or bought from the wandering trader
+- Crops can occasionally be found growing in village farms
+
+</details>
+
+<details>
 <summary>Changes to the original</summary>
 
 - toned down wonton food value

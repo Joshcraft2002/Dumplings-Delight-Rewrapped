@@ -14,7 +14,7 @@
             {
               "count": {
                 "type": "minecraft:uniform",
-                "max": 1.0,
+                "max": 0.7,
                 "min": 0.0
               },
               "enchantment": "minecraft:looting",
