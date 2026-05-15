@@ -1,6 +1,7 @@
 {
   "homepage": "https://modrinth.com/mod/dumplings-delight-rewrapped",
   "1.21.1": {
+    "1.4.1": "fixed axe mineable tag, add ja_jp",
     "1.4.0": "FD 1.3, dumpling medley model update, celery",
     "1.3.0": "villagers plant crops, crop gen in village, calamari drops as loot table, add pt_br",
     "1.2.1": "add ru_ru",
@@ -12,9 +13,9 @@
     "1.0.0": "first full port to 1.21"
   },
   "promos": {
-    "1.21.1-latest": "1.4.0",
-    "1.21.1-recommended": "1.4.0",
-    "1.21-latest": "1.4.0",
-    "1.21-recommended": "1.4.0"
+    "1.21.1-latest": "1.4.1",
+    "1.21.1-recommended": "1.4.1",
+    "1.21-latest": "1.4.1",
+    "1.21-recommended": "1.4.1"
   }
 }
